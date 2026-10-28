@@ -1,0 +1,37 @@
+# 4.0 的文件清单，**一个版本一份**。
+#
+# 为什么不再共用一份：清单必须与它描述的代码完全对应。共用一份时，
+# 只要往 main 上加了文件，还在用旧分支的用户就会去下一个不存在的文件，
+# 卡在 404 上。所以每次发版由 CI 生成一份，版本数据里的 files_info 字段指向它。
+#
+# 格式与 3.x 相同：缩进每层 4 个空格（Tab 等价），以 / 结尾表示目录（只创建不下载），
+# # 开头是注释；也可以行内直接写完整路径（如 pkg/linker.py）代替缩进。
+
+/
+    lib/
+        wave.py
+        help.py
+        configerror.py
+        configpaths.py
+        domains.py
+        selfupdate.py
+        selfupdate.sh
+
+    pkg/
+        pkginstaller.py
+        pkginstaller.sh
+        upgrader.py
+        pkginfohelper.py
+        uninstaller.py
+        pkgversionparser.py
+        pkgunzip.sh
+        linker.py
+
+    surfboard/
+        depsinstaller.py
+        depsinstaller.sh
+        depsmanager.sh
+        depsversionparser.py
+        querier.py
+        tagger.sh
+        transfer.sh

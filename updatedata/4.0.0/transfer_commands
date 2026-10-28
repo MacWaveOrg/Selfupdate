@@ -1,0 +1,15 @@
+# 4.0.0 不改变目录结构（dir_structure_change = N），所以这个文件不会被读取。
+#
+# 之所以仍然放一份：迁移脚本的格式得有个现成样本，以后真要做目录迁移时
+# 照它写就行。被读取时，下面这几个变量已经把位置告诉你了：
+#
+#   MACWAVE_INSTALL_DIR    当前安装目录（就是 config.json 里的 base_dir）
+#   MACWAVE_CONFIG_DIR     当前配置目录（/opt/macwave_config 或 ~/.config/macwave_config）
+#   MACWAVE_TARGET_VERSION 这次要升到的版本
+#
+# 约定：
+#   - 以当前用户身份执行，需要管理员权限时自己用 sudo
+#   - 失败就 exit 非零，客户端会当作「什么都没改过」并保留旧版本
+#   - 必须幂等：重跑一次不能把已经搬好的东西再搬一次
+
+exit 0
