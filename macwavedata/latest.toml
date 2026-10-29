@@ -1,0 +1,19 @@
+# MacWave 自更新数据 —— 唯一的入口文件。
+#
+# 客户端（install.sh / wave selfupdate）只读这一个文件就知道该装哪个版本、
+# 该从哪个分支取代码。它每次发版都变，所以与按版本冻结的 update_commands.sh 分开。
+#
+#   macwavedata/latest.toml                  哪个版本是最新的
+#   macwavedata/<版本>/update_commands.sh    那个版本具体怎么装
+#
+# 字段与 MacWave 仓库的 lib/domains.py 是配套约定：改字段名要两边一起改。
+#
+# version       这次要装 / 升到的版本
+# release_date  发布日期（YYYY-MM-DD）
+# build_number  构建号（当年第几天 + 字母 + HHMM，如 301A1719）
+# branch        MacWave 仓库里配套的代码分支；代码与版本号必须对应同一个版本
+
+version = "4.0.0"
+release_date = "2026-11-XX"
+build_number = "400A0000"
+branch = "4.0"
