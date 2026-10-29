@@ -13,7 +13,7 @@
 # build_number  构建号（当年第几天 + 字母 + HHMM，如 301A1719）
 # branch        MacWave 仓库里配套的代码分支；代码与版本号必须对应同一个版本
 
-version = "4.0.0"
+version = "4.1.0"
 release_date = "2026-10-29"
-build_number = "302A1208"
-branch = "4.0"
+build_number = "302B1551"
+branch = "4.1"
