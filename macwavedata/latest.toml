@@ -14,6 +14,6 @@
 # branch        MacWave 仓库里配套的代码分支；代码与版本号必须对应同一个版本
 
 version = "4.0.0"
-release_date = "2026-11-XX"
-build_number = "400A0000"
+release_date = "2026-10-29"
+build_number = "302A1208"
 branch = "4.0"
