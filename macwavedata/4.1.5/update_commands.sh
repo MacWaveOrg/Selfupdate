@@ -171,6 +171,8 @@ install_fresh() {
 install_delta() {
     # 从上一版升级：只取这一版变动过的文件。
     # 没列出的文件保持不变 —— 它们的字节和上一版相同。
+    want lib/timeouts.py 0
+    want lib/tls.py 0
     want lib/configerror.py 0
     want lib/flags.py 0
     want lib/help.py 0
@@ -178,8 +180,6 @@ install_delta() {
     want lib/quiet.py 0
     want lib/selfupdate.py 0
     want lib/selfupdate.sh 1
-    want lib/timeouts.py 0
-    want lib/tls.py 0
     want lib/wave.py 0
     want pkg/linker.py 0
     want pkg/pkginfohelper.py 0
