@@ -163,6 +163,7 @@ install_fresh() {
     want lib/selfupdate.sh 1
     want lib/shellenv.py 0
     want lib/steplog.py 0
+    want lib/versioncmp.py 0
     want lib/wave.py 0
     want man/man1/wave-info-zh.1 0
     want man/man1/wave-info.1 0
@@ -235,6 +236,7 @@ install_delta() {
     want lib/selfupdate.sh 1
     want lib/shellenv.py 0
     want lib/steplog.py 0
+    want lib/versioncmp.py 0
     want lib/wave.py 0
     want man/man1/wave-info-zh.1 0
     want man/man1/wave-info.1 0
