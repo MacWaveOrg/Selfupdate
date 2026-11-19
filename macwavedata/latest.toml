@@ -19,8 +19,8 @@
 #
 # RC 渠道读的是 rcdata/latest.toml，不是这个文件。
 
-version = "4.4.0"
+version = "4.4.1"
 release_date = "2026-11-19"
-build_number = "323D1346"
+build_number = "323D1524"
 branch = "4.4"
-update_commands_sha256 = "6597e2b4a453f4bd89b5837f3923fc34a87fab7efafd53aada2a0b07957ec8d8"
+update_commands_sha256 = "345c11eed38279ca5c4a1d94d8a52f3d1451373ea3628765adc7ef3cdcb4157b"
