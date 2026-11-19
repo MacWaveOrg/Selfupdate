@@ -10,10 +10,17 @@
 #
 # version       这次要装 / 升到的版本
 # release_date  发布日期（YYYY-MM-DD）
-# build_number  构建号：年内第几天 + 周几字母（周一=A … 周日=G）+ HHMM，如 318F1452
+# build_number  构建号：距 2026-01-01 的天数（3 位）+ 渠道/周几字母 + HHMM
+#               正式版 A-G（周一-Sun）、H 特殊日期；Beta I-O/P；RC 固定 R
 # branch        MacWave 仓库里配套的代码分支；代码与版本号必须对应同一个版本
+#
+# update_commands_sha256  4.4 起：钉住即将被 bash 执行的那份脚本。
+#               客户端不符时只警告，MACWAVE_STRICT_HASHES=1 才失败。
+#
+# RC 渠道读的是 rcdata/latest.toml，不是这个文件。
 
-version = "4.3.4"
-release_date = "2026-11-15"
-build_number = "319G1644"
-branch = "4.3"
+version = "4.4.0"
+release_date = "2026-11-19"
+build_number = "323D1315"
+branch = "4.4"
+update_commands_sha256 = "274580672ce11b7ee5f1440fe2e24848ba75c94771b35564fe388cd56d1940ef"
