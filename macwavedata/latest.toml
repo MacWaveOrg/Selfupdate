@@ -21,6 +21,6 @@
 
 version = "4.4.0"
 release_date = "2026-11-19"
-build_number = "323D1315"
+build_number = "323D1346"
 branch = "4.4"
-update_commands_sha256 = "274580672ce11b7ee5f1440fe2e24848ba75c94771b35564fe388cd56d1940ef"
+update_commands_sha256 = "6597e2b4a453f4bd89b5837f3923fc34a87fab7efafd53aada2a0b07957ec8d8"

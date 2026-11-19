@@ -179,6 +179,13 @@ want() {
     if ! fetch "$url" "$destination"; then
         mw_say_err "🌊 Error: cannot download $repo_path" "🌊 错误：无法下载 $repo_path"
         echo "🌊   $(redact_url "$url")" >&2
+        # 404 有两种完全不同的原因：单个文件被删了，或者整棵 core/<分支>/ 压根没同步。
+        # 后者是新分支上线当天的常态（镜像一天只跑一次），而且症状看起来一模一样 ——
+        # 2026-11-19 装 4.4.0 时就被这条绕了：日志里只说某一个文件下不到。
+        mw_say_err "🌊 If every file fails like this, the mirror has not synced branch $MACWAVE_BRANCH yet." \
+                   "🌊 如果每个文件都这样，说明镜像还没同步 ${MACWAVE_BRANCH} 这个分支。"
+        mw_say_err "🌊 Run scripts/mirror-sync/mirror-sync.sh on the mirror (see docs/MIRROR-SETUP.md)." \
+                   "🌊 在镜像机上跑 scripts/mirror-sync/mirror-sync.sh（见 docs/MIRROR-SETUP.md）。"
         # 必须 exit 而不是 return：install_fresh / install_delta 是一串裸的
         # `want ...`，没有 `|| exit`，脚本也没有 set -e。用 return 1 的话
         # 调用方不看返回值，于是「有文件没下到」会被当成更新成功，客户端照旧
@@ -204,7 +211,6 @@ want() {
 install_fresh() {
     # 首次安装（或修复一棵不完整的安装树）：所有文件都要。
     want Keys/D0E229FB.asc 0 f2852806fdd64f2df320e6446aa704455b4c85cfa27bead7d29ecf32e3d7647b
-    want Keys/README.md 0 228e94d727e7355b1801d803e205a1ad533a68cb6675b4beca815f95d6c61aaf
     want Keys/macwave-rsa.pub.pem 0 4b15601f77a302cc1ba2610cd3d96ff1e8982da98a401555eaa225fea6473c17
     want cli/commands.py 0 754cb98581a7a6e29dbd9ff2994ee3e6ee54122286e12abb458916b9d9b11981
     want cli/common.py 0 6350ff4bb44b6f952ad884a97334c36edb0f153de82fc14405c97b790109bf3f
@@ -282,7 +288,6 @@ install_delta() {
     # 从上一版升级：只取这一版变动过的文件。
     # 没列出的文件保持不变 —— 它们的字节和上一版相同。
     want Keys/D0E229FB.asc 0 f2852806fdd64f2df320e6446aa704455b4c85cfa27bead7d29ecf32e3d7647b
-    want Keys/README.md 0 228e94d727e7355b1801d803e205a1ad533a68cb6675b4beca815f95d6c61aaf
     want Keys/macwave-rsa.pub.pem 0 4b15601f77a302cc1ba2610cd3d96ff1e8982da98a401555eaa225fea6473c17
     want cli/commands.py 0 754cb98581a7a6e29dbd9ff2994ee3e6ee54122286e12abb458916b9d9b11981
     want cli/common.py 0 6350ff4bb44b6f952ad884a97334c36edb0f153de82fc14405c97b790109bf3f
@@ -359,7 +364,6 @@ install_delta() {
 # 本版安装树应有的全部文件（与 install_fresh 同一份清单，见生成器里的 list_lines）。
 FULL_FILES="
 Keys/D0E229FB.asc
-Keys/README.md
 Keys/macwave-rsa.pub.pem
 cli/commands.py
 cli/common.py
