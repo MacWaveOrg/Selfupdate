@@ -271,7 +271,7 @@ install_fresh() {
     want net/tls.py 0 32dac87a9e197f1b9d492dcc8549e48a715e398ee321d1bcc8b6daade003bd52
     want pkg/linker.py 0 37809a1911d86c7454c03ef85b342893723790d5a15f504d2cc80b642b549f1d
     want pkg/pkginfohelper.py 0 8e5a848546337f1e81a7744aacaad91848b5d4fab5c42f598daf1aa271bba0f7
-    want pkg/pkginstaller.py 0 f2628397336026e99a61d2c4b96e70b256bbfd126f5a503cfe713175041012d2
+    want pkg/pkginstaller.py 0 d8595373eea1dcc3c735aef87773f90b6be7651beff2168619e15658de8ea4e6
     want pkg/pkginstaller.sh 1 f36e088ead500f44aa3b9cfa052057892daf7531eb8027616491c6e39c779dd8
     want pkg/pkgunzip.sh 1 a2304c89fc8ea4392deaf12dadf66fc4c90719319a968b09f430c73460c35260
     want pkg/uninstaller.py 0 1ed934c7a3fd3bd6000476aa876a7c3736c72c7a8e11644f4103bacf3e71c6ce
@@ -348,7 +348,7 @@ install_delta() {
     want net/tls.py 0 32dac87a9e197f1b9d492dcc8549e48a715e398ee321d1bcc8b6daade003bd52
     want pkg/linker.py 0 37809a1911d86c7454c03ef85b342893723790d5a15f504d2cc80b642b549f1d
     want pkg/pkginfohelper.py 0 8e5a848546337f1e81a7744aacaad91848b5d4fab5c42f598daf1aa271bba0f7
-    want pkg/pkginstaller.py 0 f2628397336026e99a61d2c4b96e70b256bbfd126f5a503cfe713175041012d2
+    want pkg/pkginstaller.py 0 d8595373eea1dcc3c735aef87773f90b6be7651beff2168619e15658de8ea4e6
     want pkg/pkginstaller.sh 1 f36e088ead500f44aa3b9cfa052057892daf7531eb8027616491c6e39c779dd8
     want pkg/pkgunzip.sh 1 a2304c89fc8ea4392deaf12dadf66fc4c90719319a968b09f430c73460c35260
     want pkg/uninstaller.py 0 1ed934c7a3fd3bd6000476aa876a7c3736c72c7a8e11644f4103bacf3e71c6ce
