@@ -1,0 +1,17 @@
+# MacWave RC 渠道的版本指针 —— 与 macwavedata/latest.toml（正式版）完全隔离。
+#
+# 为什么要独立一个文件：正式版探针每次发版都被覆盖，RC 一天可能发好几次；
+# 写同一个文件必然出现「发 RC 时把正式版指针改坏」。
+#
+# 装的是 X.Y.Z-rc 的客户端只读这一个文件；正式版客户端永远不读它
+# （见 MacWave 仓库 net/domains.py 的 selfupdate_rc_latest_url 与
+# lib/versioncompare.py 的 channel_for）。
+#
+# build_number 必填：同一个 version 可能构建多次，只比 version 会得出「已是最新」。
+# 字母固定 R，天数从 2026-01-01 起算（见 docs/RELEASE-CHECKLIST.md 一点六）。
+
+version = "4.4.0-rc"
+release_date = "2026-11-19"
+build_number = "323R1307"
+branch = "4.4"
+update_commands_sha256 = "8ddf9dee8fe6f9b1511e3931491467e038852e5d2dee27ee1d00d661f0d33ecc"
