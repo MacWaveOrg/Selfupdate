@@ -1,3 +1,17 @@
+> **⚠ 本仓库已归档（read-only）。**
+> **This repository is archived (read-only).**
+>
+> 1.0 起由 **Summerwave** 承接：<https://github.com/SummerwaveOrg/Summerwave>
+>
+> **没有对应仓 / No successor.**
+> 1.0 起「该装哪一版」由 **`SummerwaveOrg/Summerwave` 的发布 tag** 决定
+> （`v<版本>@<UTC 构建时刻>`，见 docs/CONVENTIONS.md），文件清单内嵌在那一版的
+> `install.sh` 里 —— 版本数据、逐文件清单、冻结的更新脚本三样都不再需要。
+>
+> 归档不影响历史内容：代码、raw 文件、Release 资产与 Pages 站点仍可访问。
+> Archiving keeps everything readable: code, raw files, release assets and the Pages site.
+
+
 # MacWaveOrg/Selfupdate
 
 MacWave 的自更新数据。它只回答两个问题：
